@@ -1,5 +1,6 @@
 package com.fastoffer.backend.controllers;
 
+import com.fastoffer.backend.dtos.EgoResults;
 import com.fastoffer.backend.dtos.SignupGetDto;
 import com.fastoffer.backend.dtos.SignupPostDto;
 import com.fastoffer.backend.services.SignupService;
@@ -18,8 +19,8 @@ public class SignupController {
 
 
     @PostMapping
-    public ResponseEntity<SignupGetDto> createInterviewee(@RequestBody SignupPostDto signupPostDto){
-        SignupGetDto signupGetDto = signupService.createInterviewee(signupPostDto);
-        return ResponseEntity.ok(signupGetDto);
+    public ResponseEntity<EgoResults> createInterviewee(@RequestBody SignupPostDto signupPostDto){
+        EgoResults egoResults= signupService.createInterviewee(signupPostDto);
+        return ResponseEntity.ok(egoResults);
     }
 }

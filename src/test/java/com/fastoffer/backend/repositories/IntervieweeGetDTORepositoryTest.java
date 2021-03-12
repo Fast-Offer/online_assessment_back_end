@@ -16,7 +16,7 @@ public class IntervieweeGetDTORepositoryTest {
     @Autowired
     private IntervieweeRepository intervieweeRepository;
     @Test
-    public void shouldAddIntervieweeIntoDBSucessfullyGivenPropertyIntervieweeObject(){
+    public void shouldAddIntervieweeIntoDBSuccessfullyGivenPropertyIntervieweeObject(){
         IntervieweeEntity intervieweeEntity = new IntervieweeEntity();
         intervieweeEntity.setEmail("1234@gmail.com");
         intervieweeEntity.setPassword("123445");

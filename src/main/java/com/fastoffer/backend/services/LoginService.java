@@ -19,20 +19,28 @@ public class LoginService {
         LoginGetDto loginGetDto = new LoginGetDto();
 
         IntervieweeEntity intervieweeEntity = findByEmail(loginPostDto.getEmail());
-        System.out.println(loginPostDto.getPassword().getClass());
-        System.out.println(intervieweeEntity.getPassword().getClass());
-        EgoResults egoResults;
-        if (intervieweeEntity.getPassword().equals( loginPostDto.getPassword())) {
-            loginGetDto.setResult("match password");
-            egoResults = EgoResults.ok(loginGetDto);
 
+        EgoResults egoResults;
+
+        if(intervieweeRepository.existsByEmail(loginPostDto.getEmail())){
+            if (intervieweeEntity.getPassword().equals( loginPostDto.getPassword())) {
+                loginGetDto.setResult("match password");
+                egoResults = EgoResults.ok(loginGetDto);
+
+            } else {
+                loginGetDto.setResult("wrong password");
+                egoResults = EgoResults.error(loginGetDto.getResult());
+            }
         } else {
-            loginGetDto.setResult("wrong password");
+            loginGetDto.setResult("not exist this Email");
             egoResults = EgoResults.error(loginGetDto.getResult());
         }
+        //判断email
+
         return egoResults;
     }
 
+    //不存在email
 
     @GetMapping(value="/findByEmail/{email}")
     public IntervieweeEntity findByEmail(@PathVariable("email") String email){

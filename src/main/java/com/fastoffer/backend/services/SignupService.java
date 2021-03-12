@@ -1,5 +1,6 @@
 package com.fastoffer.backend.services;
 
+import com.fastoffer.backend.dtos.EgoResults;
 import com.fastoffer.backend.dtos.SignupGetDto;
 import com.fastoffer.backend.dtos.SignupPostDto;
 import com.fastoffer.backend.entities.IntervieweeEntity;
@@ -13,18 +14,22 @@ public class SignupService {
     @Autowired
     IntervieweeRepository intervieweeRepository;
 
-    public SignupGetDto createInterviewee(SignupPostDto signupPostDto) {
+    public EgoResults createInterviewee(SignupPostDto signupPostDto) {
+        EgoResults egoResults;
+
         IntervieweeEntity intervieweeEntity = this.mapPostDtoToEntity(signupPostDto);
 
         if(intervieweeRepository.existsByEmail(signupPostDto.getEmail())){
             SignupGetDto failInterviewGetDto = new SignupGetDto();
             failInterviewGetDto.setResult("already exist email");
-            return failInterviewGetDto;
+            egoResults = EgoResults.error(failInterviewGetDto.getResult());
+            return egoResults;
         } else {
             IntervieweeEntity savedInterviewEntity = intervieweeRepository.save(intervieweeEntity);
             SignupGetDto signupGetDto = this.mapEntityToGetDto(savedInterviewEntity);
             signupGetDto.setResult("successfully");
-            return signupGetDto;
+            egoResults = EgoResults.ok(signupGetDto);
+            return egoResults;
         }
 }
 
