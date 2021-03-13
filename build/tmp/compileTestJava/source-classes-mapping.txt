@@ -1,0 +1,8 @@
+com/fastoffer/backend/repositories/IntervieweeGetDTORepositoryTest.java
+ com.fastoffer.backend.repositories.IntervieweeGetDTORepositoryTest
+com/fastoffer/backend/BackendApplicationTests.java
+ com.fastoffer.backend.BackendApplicationTests
+com/fastoffer/backend/controllers/SignupControllerTest.java
+ com.fastoffer.backend.controllers.SignupControllerTest
+com/fastoffer/backend/sevices/SignupServiceTest.java
+ com.fastoffer.backend.sevices.SignupServiceTest
