@@ -20,13 +20,6 @@ public class LoginController {
     LoginService LoginService;
 
 
-//    @PostMapping
-//    public ResponseEntity<Map<String, Integer>> checkPassword(@RequestBody LoginPostDto loginPostDto){
-//        EgoResults egoResults= LoginService.verifyLogin(loginPostDto);
-//        Map<String,Integer> map = new HashMap<String,Integer>();
-//        map.put(egoResults.getMsg(),egoResults.getStatus());
-//        return ResponseEntity.ok(map);
-//    }
 @PostMapping
 public ResponseEntity<EgoResults> checkPassword(@RequestBody LoginPostDto loginPostDto){
     EgoResults egoResults= LoginService.verifyLogin(loginPostDto);
