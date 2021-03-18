@@ -10,14 +10,15 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
-@Table(name = "interviewee")
+@Table(name = "user")
 
-public class IntervieweeEntity {
+public class UserEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
 
     private UUID id;
+
     @Column(name="email", unique = true, nullable = false)
     private String email;
     @Column(name="password", unique = false, nullable = false)
