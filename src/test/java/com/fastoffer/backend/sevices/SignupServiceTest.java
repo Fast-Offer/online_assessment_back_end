@@ -1,8 +1,8 @@
 //package com.fastoffer.backend.sevices;
 //
 //import com.fastoffer.backend.BackendApplication;
-//import com.fastoffer.backend.dtos.SignupGetDto;
-//import com.fastoffer.backend.dtos.SignupPostDto;
+//import com.fastoffer.backend.dtos.signup.SignupGetDto;
+//import com.fastoffer.backend.dtos.signup.SignupPostDto;
 //import com.fastoffer.backend.entities.UserEntity;
 //import com.fastoffer.backend.repositories.UserRepository;
 //import com.fastoffer.backend.services.SignupService;

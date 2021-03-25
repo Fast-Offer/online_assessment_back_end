@@ -1,53 +1,42 @@
 package com.fastoffer.backend.services;
 
-import com.fastoffer.backend.dtos.EgoResults;
-import com.fastoffer.backend.dtos.SignupGetDto;
-import com.fastoffer.backend.dtos.SignupPostDto;
+import com.fastoffer.backend.dtos.ResponseResults;
+import com.fastoffer.backend.dtos.signup.SignupPostDto;
 import com.fastoffer.backend.entities.UserEntity;
+import com.fastoffer.backend.mapper.UserMapper;
 import com.fastoffer.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.DigestUtils;
+
+import java.util.UUID;
+
 
 @Service
 public class SignupService {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
-    public EgoResults createUser(SignupPostDto signupPostDto) {
-        EgoResults egoResults;
+    @Autowired
+    private UserMapper userMapper;
 
-        UserEntity userEntity = this.mapPostDtoToEntity(signupPostDto);
-
-        if(userRepository.existsByEmail(signupPostDto.getEmail())){
-            SignupGetDto failInterviewGetDto = new SignupGetDto();
-            failInterviewGetDto.setResult("already exist email");
-            egoResults = EgoResults.error(failInterviewGetDto.getResult());
-            return egoResults;
-        } else {
-            UserEntity savedInterviewEntity = userRepository.save(userEntity);
-            SignupGetDto signupGetDto = this.mapEntityToGetDto(savedInterviewEntity);
-            signupGetDto.setResult("successfully");
-            egoResults = EgoResults.ok(signupGetDto);
-            return egoResults;
+    @Transactional
+    public ResponseResults createUser(SignupPostDto signupPostDto) {
+        UserEntity userCheck = userRepository.findByEmail(signupPostDto.getEmail());
+        if (userCheck != null) {
+            return ResponseResults.error("email has existed, please change another one or retry to login");
         }
-}
-
-    private UserEntity mapPostDtoToEntity(SignupPostDto signupPostDto){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setEmail(signupPostDto.getEmail());
-        userEntity.setPassword(signupPostDto.getPassword());
-        return userEntity;
-}
-
-    private SignupGetDto mapEntityToGetDto(UserEntity userEntity){
-        SignupGetDto signupGetDto = new SignupGetDto();
-        signupGetDto.setId(userEntity.getId().toString());
-        signupGetDto.setEmail(userEntity.getEmail());
-        return signupGetDto;
+        UserEntity userEntity = userMapper.fromEntity(signupPostDto);
+        String password = userEntity.getPassword();
+        String md5DigestAsHex = DigestUtils.md5DigestAsHex(password.getBytes());
+        userEntity.setPassword(md5DigestAsHex);
+        UserEntity save = userRepository.save(userEntity);
+        if (save != null) {
+            return ResponseResults.ok();
+        }
+        return ResponseResults.error("signup failed");
     }
 
 }
-//1 名字
-//2 校验
-// 响应码 json文件 {注册成功} or { 失败写具体内容 查 email exist }

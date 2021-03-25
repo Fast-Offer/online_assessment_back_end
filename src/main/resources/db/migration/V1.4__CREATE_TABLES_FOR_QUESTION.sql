@@ -12,9 +12,4 @@ CREATE TABLE public.question
     explanation character varying(500) COLLATE pg_catalog."default" NOT NULL,
     category character varying(50) COLLATE pg_catalog."default" NOT NULL
 
-
-
-
-
-
 );

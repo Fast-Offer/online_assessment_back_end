@@ -1,8 +1,8 @@
 //package com.fastoffer.backend.controllers;
 //
 //import com.fasterxml.jackson.databind.ObjectMapper;
-//import com.fastoffer.backend.dtos.SignupGetDto;
-//import com.fastoffer.backend.dtos.SignupPostDto;
+//import com.fastoffer.backend.dtos.signup.SignupGetDto;
+//import com.fastoffer.backend.dtos.signup.SignupPostDto;
 //import com.fastoffer.backend.services.SignupService;
 //import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api.extension.ExtendWith;
