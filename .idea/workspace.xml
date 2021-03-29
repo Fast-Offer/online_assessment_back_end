@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0d56595-9842-4f65-97f1-01ec8d5d8810" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/entities/IntervieweeEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/repositories/IntervieweeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/entities/IntervieweeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/repositories/IntervieweeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/configuration-cache/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2bb9a916550c6f097092e45ac803b1b9d9b9acaf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2bb9a916550c6f097092e45ac803b1b9d9b9acaf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/bedcb8b5fde1c466044898913d41111dd1204522" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/e/bedcb8b5fde1c466044898913d41111dd1204522" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/controllers/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/controllers/SignupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/services/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/services/SignupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/fastoffer/backend/services/SignupService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/controllers/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/controllers/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/services/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/services/SignupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fastoffer/backend/services/SignupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fastoffer/backend/controllers/SignupControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fastoffer/backend/controllers/SignupControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fastoffer/backend/repositories/IntervieweeGetDTORepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fastoffer/backend/repositories/IntervieweeGetDTORepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/fastoffer/backend/sevices/SignupServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fastoffer/backend/sevices/SignupServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1pN9uv0CUTzxQT3Bta3pHBcSlls" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../demo12" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\urnot\Desktop\全栈\p3\online_assessment_back_end\src\main\resources\db\migration" />
+      <recent name="C:\Users\urnot\Desktop\全栈\p3\online_assessment_back_end\src\test" />
+      <recent name="C:\Users\urnot\Desktop\全栈\p3\online_assessment_back_end\src\test\java\com\fastoffer\backend" />
+      <recent name="C:\Users\urnot\Desktop\全栈\p3\online_assessment_back_end\src\main\java\com\fastoffer\backend" />
+      <recent name="C:\Users\urnot\Desktop\全栈\p3\online_assessment_back_end\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.BackendApplication">
+    <configuration name="BackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fastoffer.backend.BackendApplication" />
+      <module name="backend.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fastoffer.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.fastoffer.backend.BackendApplicationTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SignupServiceTest.shouldAddIntervieweeSuccessfullyGivenProperInterviewee" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.fastoffer.backend.sevices.SignupServiceTest.shouldAddIntervieweeSuccessfullyGivenProperInterviewee&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SignupServiceTest.shouldReturnAlreadyExistEmailWhenInputSameEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.fastoffer.backend.sevices.SignupServiceTest.shouldReturnAlreadyExistEmailWhenInputSameEmail&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fastoffer.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CorebusinessApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backend.corebusiness.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fastoffer.corebusiness.CorebusinessApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backend.login.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fastoffer.login.LoginApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.SignupServiceTest.shouldReturnAlreadyExistEmailWhenInputSameEmail" />
+        <item itemvalue="Gradle.SignupServiceTest.shouldAddIntervieweeSuccessfullyGivenProperInterviewee" />
+        <item itemvalue="Gradle.BackendApplicationTests" />
+        <item itemvalue="Application.BackendApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0d56595-9842-4f65-97f1-01ec8d5d8810" name="Default Changelist" comment="" />
+      <created>1615012906563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615012906563</updated>
+      <workItem from="1615012910075" duration="153000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="599" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616081908990">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="599" y="320" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616081908990" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1616046583068">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1616046583068" />
+    <state x="544" y="279" width="448" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1616410564488">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="544" y="279" width="448" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1616410564488" />
+    <state x="483" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616080059738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="483" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616080059738" />
+    <state x="386" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1615993908408" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616154194431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616154194431" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1616341076282">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1616341076282" />
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom" timestamp="1616485127334">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616160619921" />
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1616485127334" />
+    <state width="1493" height="266" key="GridCell.Tab.0.center" timestamp="1616485127333">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616160619921" />
+    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1616485127333" />
+    <state width="1493" height="266" key="GridCell.Tab.0.left" timestamp="1616485127333">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616160619921" />
+    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1616485127333" />
+    <state width="1493" height="266" key="GridCell.Tab.0.right" timestamp="1616485127334">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1877" height="293" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1616160619921" />
+    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1616485127334" />
+    <state width="1493" height="143" key="GridCell.Tab.1.bottom" timestamp="1616485127330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="143" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1616485127330" />
+    <state width="1493" height="143" key="GridCell.Tab.1.center" timestamp="1616485127330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="143" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1616485127330" />
+    <state width="1493" height="143" key="GridCell.Tab.1.left" timestamp="1616485127330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="143" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1616485127330" />
+    <state width="1493" height="143" key="GridCell.Tab.1.right" timestamp="1616485127330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="143" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1616485127330" />
+    <state x="338" y="71" width="1245" height="832" key="SettingsEditor" timestamp="1617016406670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="338" y="71" width="1245" height="832" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1617016406670" />
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1616345017949" />
+    <state x="292" y="148" width="951" height="641" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1616345410113">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="292" y="148" width="951" height="641" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1616345410113" />
+    <state x="467" y="0" width="602" height="824" key="find.popup" timestamp="1615994843790">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="467" y="0" width="602" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1615994843790" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fastoffer/backend/services/SignupService.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fastoffer/backend/sevices/SignupServiceTest.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodException" package="java.lang" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="((JdkDynamicAopProxy)this.h).proxiedInterfaces" custom="org.springframework.aop.framework.JdkDynamicAopProxy,java.lang.reflect.Proxy" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

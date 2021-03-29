@@ -19,8 +19,8 @@ public class SignupController {
 
 
     @PostMapping
-    public ResponseEntity<EgoResults> createInterviewee(@RequestBody SignupPostDto signupPostDto){
-        EgoResults egoResults= signupService.createInterviewee(signupPostDto);
+    public ResponseEntity<EgoResults> createUser(@RequestBody SignupPostDto signupPostDto){
+        EgoResults egoResults= signupService.createUser(signupPostDto);
         return ResponseEntity.ok(egoResults);
     }
 }

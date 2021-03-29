@@ -3,8 +3,8 @@ package com.fastoffer.backend.services;
 import com.fastoffer.backend.dtos.EgoResults;
 import com.fastoffer.backend.dtos.SignupGetDto;
 import com.fastoffer.backend.dtos.SignupPostDto;
-import com.fastoffer.backend.entities.IntervieweeEntity;
-import com.fastoffer.backend.repositories.IntervieweeRepository;
+import com.fastoffer.backend.entities.UserEntity;
+import com.fastoffer.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,20 +12,20 @@ import org.springframework.stereotype.Service;
 public class SignupService {
 
     @Autowired
-    IntervieweeRepository intervieweeRepository;
+    UserRepository userRepository;
 
-    public EgoResults createInterviewee(SignupPostDto signupPostDto) {
+    public EgoResults createUser(SignupPostDto signupPostDto) {
         EgoResults egoResults;
 
-        IntervieweeEntity intervieweeEntity = this.mapPostDtoToEntity(signupPostDto);
+        UserEntity userEntity = this.mapPostDtoToEntity(signupPostDto);
 
-        if(intervieweeRepository.existsByEmail(signupPostDto.getEmail())){
+        if(userRepository.existsByEmail(signupPostDto.getEmail())){
             SignupGetDto failInterviewGetDto = new SignupGetDto();
             failInterviewGetDto.setResult("already exist email");
             egoResults = EgoResults.error(failInterviewGetDto.getResult());
             return egoResults;
         } else {
-            IntervieweeEntity savedInterviewEntity = intervieweeRepository.save(intervieweeEntity);
+            UserEntity savedInterviewEntity = userRepository.save(userEntity);
             SignupGetDto signupGetDto = this.mapEntityToGetDto(savedInterviewEntity);
             signupGetDto.setResult("successfully");
             egoResults = EgoResults.ok(signupGetDto);
@@ -33,17 +33,17 @@ public class SignupService {
         }
 }
 
-    private IntervieweeEntity mapPostDtoToEntity(SignupPostDto signupPostDto){
-        IntervieweeEntity intervieweeEntity = new IntervieweeEntity();
-        intervieweeEntity.setEmail(signupPostDto.getEmail());
-        intervieweeEntity.setPassword(signupPostDto.getPassword());
-        return intervieweeEntity;
+    private UserEntity mapPostDtoToEntity(SignupPostDto signupPostDto){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setEmail(signupPostDto.getEmail());
+        userEntity.setPassword(signupPostDto.getPassword());
+        return userEntity;
 }
 
-    private SignupGetDto mapEntityToGetDto(IntervieweeEntity intervieweeEntity){
+    private SignupGetDto mapEntityToGetDto(UserEntity userEntity){
         SignupGetDto signupGetDto = new SignupGetDto();
-        signupGetDto.setId(intervieweeEntity.getId().toString());
-        signupGetDto.setEmail(intervieweeEntity.getEmail());
+        signupGetDto.setId(userEntity.getId().toString());
+        signupGetDto.setEmail(userEntity.getEmail());
         return signupGetDto;
     }
 
