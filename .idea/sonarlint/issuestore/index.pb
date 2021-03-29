@@ -43,3 +43,6 @@ Hsrc/main/java/com/fastoffer/backend/repositories/QuestionRepository.java,9\7\9
 Usrc/test/java/com/fastoffer/backend/repositories/IntervieweeGetDTORepositoryTest.java,8\6\862bca4d875a797e59c434998ff943c128c10fea
 p
 @src/test/java/com/fastoffer/backend/BackendApplicationTests.java,8\c\8c95164dcc361e7da220ff8f3f0be0b6bef74016
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
