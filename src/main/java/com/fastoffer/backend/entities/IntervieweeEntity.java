@@ -10,16 +10,32 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
-@Table(name = "interviewee")
+@Table(name = "interviewee_profile")
 
 public class IntervieweeEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name="uuid2",strategy="uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    private UUID interviewee_id;
 
-    private UUID id;
-    @Column(name="email", unique = true, nullable = false)
-    private String email;
-    @Column(name="password", unique = false, nullable = false)
-    private String password;
+    @Column(name = "name", nullable = false)
+    private String name;
+
+    @Column(name = "age")
+    private String age;
+
+    @Column(name = "avatar")
+    private String avatar;
+
+    @Column(name = "self_introduction")
+    private String self_introduction;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "website")
+    private String website;
+
+    @Column(name = "location")
+    private String location;
 }
