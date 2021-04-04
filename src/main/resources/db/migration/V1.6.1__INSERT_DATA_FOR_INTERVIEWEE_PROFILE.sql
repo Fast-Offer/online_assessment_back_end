@@ -1,0 +1,1 @@
+insert into interviewee_profile (interviewee_id, name, age, avatar, self_introduction, phone, website, location) values ('ce61bce6-c865-4ca1-8127-1e3a94101e7f', 'Overhold', '25', 'NULL', 'Hello Im windows', '0401128839', 'https://www.baidu.com', 'Sydney, Australia');
