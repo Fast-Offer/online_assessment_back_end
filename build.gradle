@@ -1,0 +1,62 @@
+buildscript {
+    ext {
+        flywayVersion = "7.6.0"
+    }
+}
+plugins {
+    id 'org.springframework.boot' version '2.4.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id "org.flywaydb.flyway" version "7.6.0"
+}
+
+ext {
+    flywayVersion = "7.6.0"
+    mockitoVersion = '3.5.15'
+}
+
+
+flyway {
+    locations= ['classpath:/db/migration']
+    url = 'jdbc:postgresql://localhost:5001/fastoffer'
+    user = 'postgres'
+    password = 'postgres'
+
+}
+group = 'com.fastoffer'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.flywaydb:flyway-core:${flywayVersion}"
+    implementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'com.h2database:h2'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
+    testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    runtimeOnly 'org.postgresql:postgresql'
+}
+
+test {
+    useJUnitPlatform()
+}
