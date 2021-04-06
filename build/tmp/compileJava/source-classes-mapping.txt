@@ -1,63 +1,52 @@
-<<<<<<< HEAD
-com/fastoffer/backend/entities/QuestionEntity.java
- com.fastoffer.backend.entities.QuestionEntity
-com/fastoffer/backend/dtos/LoginPostDto.java
- com.fastoffer.backend.dtos.LoginPostDto
-com/fastoffer/backend/dtos/LoginGetDto.java
- com.fastoffer.backend.dtos.LoginGetDto
-com/fastoffer/backend/services/SignupService.java
- com.fastoffer.backend.services.SignupService
-com/fastoffer/backend/dtos/RedoPostDto.java
- com.fastoffer.backend.dtos.RedoPostDto
-com/fastoffer/backend/controllers/SignupController.java
- com.fastoffer.backend.controllers.SignupController
-com/fastoffer/backend/BackendApplication.java
- com.fastoffer.backend.BackendApplication
-com/fastoffer/backend/dtos/SignupPostDto.java
- com.fastoffer.backend.dtos.SignupPostDto
-com/fastoffer/backend/dtos/SignupGetDto.java
- com.fastoffer.backend.dtos.SignupGetDto
-com/fastoffer/backend/dtos/EgoResults.java
- com.fastoffer.backend.dtos.EgoResults
-com/fastoffer/backend/controllers/LoginController.java
- com.fastoffer.backend.controllers.LoginController
 com/fastoffer/backend/repositories/QuestionRepository.java
  com.fastoffer.backend.repositories.QuestionRepository
-com/fastoffer/backend/entities/UserEntity.java
- com.fastoffer.backend.entities.UserEntity
-com/fastoffer/backend/repositories/UserRepository.java
- com.fastoffer.backend.repositories.UserRepository
 com/fastoffer/backend/services/LoginService.java
  com.fastoffer.backend.services.LoginService
-com/fastoffer/backend/dtos/RedoGetDto.java
- com.fastoffer.backend.dtos.RedoGetDto
-com/fastoffer/backend/controllers/RedoController.java
- com.fastoffer.backend.controllers.RedoController
-com/fastoffer/backend/services/RedoService.java
- com.fastoffer.backend.services.RedoService
-=======
-com/fastoffer/backend/dtos/LoginPostDto.java
- com.fastoffer.backend.dtos.LoginPostDto
-com/fastoffer/backend/dtos/EgoResults.java
- com.fastoffer.backend.dtos.EgoResults
-com/fastoffer/backend/repositories/IntervieweeRepository.java
- com.fastoffer.backend.repositories.IntervieweeRepository
-com/fastoffer/backend/dtos/SignupPostDto.java
- com.fastoffer.backend.dtos.SignupPostDto
-com/fastoffer/backend/dtos/LoginGetDto.java
- com.fastoffer.backend.dtos.LoginGetDto
+com/fastoffer/backend/dtos/ControllerErrorDto.java
+ com.fastoffer.backend.dtos.ControllerErrorDto
+com/fastoffer/backend/dtos/Login/LoginGetDto.java
+ com.fastoffer.backend.dtos.Login.LoginGetDto
 com/fastoffer/backend/BackendApplication.java
  com.fastoffer.backend.BackendApplication
-com/fastoffer/backend/controllers/LoginController.java
- com.fastoffer.backend.controllers.LoginController
-com/fastoffer/backend/entities/IntervieweeEntity.java
- com.fastoffer.backend.entities.IntervieweeEntity
-com/fastoffer/backend/services/LoginService.java
- com.fastoffer.backend.services.LoginService
-com/fastoffer/backend/dtos/SignupGetDto.java
- com.fastoffer.backend.dtos.SignupGetDto
-com/fastoffer/backend/services/SignupService.java
- com.fastoffer.backend.services.SignupService
+com/fastoffer/backend/dtos/Login/LoginPostDto.java
+ com.fastoffer.backend.dtos.Login.LoginPostDto
+com/fastoffer/backend/exceptions/GlobalExceptionHandler.java
+ com.fastoffer.backend.exceptions.GlobalExceptionHandler
 com/fastoffer/backend/controllers/SignupController.java
  com.fastoffer.backend.controllers.SignupController
->>>>>>> origin/dev
+com/fastoffer/backend/dtos/Signup/SignupPostDto.java
+ com.fastoffer.backend.dtos.Signup.SignupPostDto
+com/fastoffer/backend/services/SignupService.java
+ com.fastoffer.backend.services.SignupService
+com/fastoffer/backend/entities/IntervieweeAccountEntity.java
+ com.fastoffer.backend.entities.IntervieweeAccountEntity
+com/fastoffer/backend/controllers/IntervieweeController.java
+ com.fastoffer.backend.controllers.IntervieweeController
+com/fastoffer/backend/entities/QuestionEntity.java
+ com.fastoffer.backend.entities.QuestionEntity
+com/fastoffer/backend/controllers/LoginController.java
+ com.fastoffer.backend.controllers.LoginController
+com/fastoffer/backend/services/IntervieweeService.java
+ com.fastoffer.backend.services.IntervieweeService
+com/fastoffer/backend/repositories/IntervieweeAccountRepository.java
+ com.fastoffer.backend.repositories.IntervieweeAccountRepository
+com/fastoffer/backend/dtos/Signup/SignupGetDto.java
+ com.fastoffer.backend.dtos.Signup.SignupGetDto
+com/fastoffer/backend/exceptions/InvalidAccountException.java
+ com.fastoffer.backend.exceptions.InvalidAccountException
+com/fastoffer/backend/repositories/RedoRepository.java
+ com.fastoffer.backend.repositories.RedoRepository
+com/fastoffer/backend/repositories/IntervieweeProfileRepository.java
+ com.fastoffer.backend.repositories.IntervieweeProfileRepository
+com/fastoffer/backend/entities/IntervieweeProfileEntity.java
+ com.fastoffer.backend.entities.IntervieweeProfileEntity
+com/fastoffer/backend/entities/RedoEntity.java
+ com.fastoffer.backend.entities.RedoEntity
+com/fastoffer/backend/dtos/IntervieweeProfile/IntervieweeProfileGetDto.java
+ com.fastoffer.backend.dtos.IntervieweeProfile.IntervieweeProfileGetDto
+com/fastoffer/backend/dtos/Redo/RedoGetDto.java
+ com.fastoffer.backend.dtos.Redo.RedoGetDto
+com/fastoffer/backend/dtos/Redo/RedoPostDto.java
+ com.fastoffer.backend.dtos.Redo.RedoPostDto
+com/fastoffer/backend/dtos/IntervieweeProfile/IntervieweeProfilePostDto.java
+ com.fastoffer.backend.dtos.IntervieweeProfile.IntervieweeProfilePostDto
