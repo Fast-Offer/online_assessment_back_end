@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/profile")
 @RequiredArgsConstructor
-public class IntervieweeController {
+public class IntervieweeProfileController {
 
     private final IntervieweeService intervieweeService;
 

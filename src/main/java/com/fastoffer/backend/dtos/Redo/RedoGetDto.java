@@ -1,4 +1,4 @@
-package com.fastoffer.backend.dtos;
+package com.fastoffer.backend.dtos.Redo;
 
 import lombok.Data;
 
@@ -8,5 +8,4 @@ public class RedoGetDto {
     private String id;
     private String title;
     private String category;
-    private String status;
 }

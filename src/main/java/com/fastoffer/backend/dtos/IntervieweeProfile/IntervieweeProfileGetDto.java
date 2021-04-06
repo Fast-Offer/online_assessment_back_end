@@ -3,7 +3,7 @@ package com.fastoffer.backend.dtos.IntervieweeProfile;
 import lombok.Data;
 
 @Data
-public class IntervieweeGetDto {
+public class IntervieweeProfileGetDto {
     private String name;
     private String age;
     private String avatar;

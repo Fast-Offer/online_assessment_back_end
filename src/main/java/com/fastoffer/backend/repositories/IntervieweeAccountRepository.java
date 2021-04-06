@@ -5,8 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface UserRepository extends JpaRepository<IntervieweeAccountEntity, UUID> {
+public interface IntervieweeAccountRepository extends JpaRepository<IntervieweeAccountEntity, UUID> {
     IntervieweeAccountEntity findByEmail(String Email);
     boolean existsByEmail(String Email);
-
 }

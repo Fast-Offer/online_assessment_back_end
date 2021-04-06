@@ -2,7 +2,6 @@ package com.fastoffer.backend.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -12,11 +11,13 @@ import java.util.UUID;
 @Getter
 @Table(name = "interviewee_profile")
 
-public class IntervieweeEntity {
+public class IntervieweeProfileEntity {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    private UUID interviewee_id;
+    private UUID profile_id;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_interviewee_id", referencedColumnName = "interviewee_id")
+    private IntervieweeAccountEntity intervieweeAccountEntity;
 
     @Column(name = "name", nullable = false)
     private String name;

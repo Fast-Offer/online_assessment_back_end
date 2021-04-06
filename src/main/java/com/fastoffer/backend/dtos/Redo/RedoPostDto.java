@@ -1,4 +1,4 @@
-package com.fastoffer.backend.dtos;
+package com.fastoffer.backend.dtos.Redo;
 
 import lombok.Data;
 

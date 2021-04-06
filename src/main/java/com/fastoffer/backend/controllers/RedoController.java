@@ -1,9 +1,7 @@
 package com.fastoffer.backend.controllers;
 
-import com.fastoffer.backend.dtos.EgoResults;
-import com.fastoffer.backend.dtos.LoginPostDto;
-import com.fastoffer.backend.dtos.RedoGetDto;
-import com.fastoffer.backend.dtos.RedoPostDto;
+import com.fastoffer.backend.dtos.Redo.RedoGetDto;
+import com.fastoffer.backend.dtos.Redo.RedoPostDto;
 import com.fastoffer.backend.services.RedoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
