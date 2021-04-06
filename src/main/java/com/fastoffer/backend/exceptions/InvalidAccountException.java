@@ -1,2 +1,7 @@
-package com.fastoffer.backend.exceptions;public class InvalidAccountException {
+package com.fastoffer.backend.exceptions;
+
+public class InvalidAccountException extends RuntimeException{
+    public InvalidAccountException(String message)  {
+        super(message);
+    }
 }
