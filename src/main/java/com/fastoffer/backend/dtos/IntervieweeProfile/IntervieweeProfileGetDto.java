@@ -1,9 +1,9 @@
-package com.fastoffer.backend.dtos;
+package com.fastoffer.backend.dtos.IntervieweeProfile;
 
 import lombok.Data;
 
 @Data
-public class IntervieweePostDto {
+public class IntervieweeGetDto {
     private String name;
     private String age;
     private String avatar;
