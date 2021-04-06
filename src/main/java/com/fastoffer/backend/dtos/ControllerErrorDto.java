@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class FastofferErrorDto {
+public class ControllerErrorDto {
 
     private final int errorCode;
 
