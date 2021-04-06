@@ -47,8 +47,6 @@ public class QuestionEntity {
     @Column(name="name",  nullable = false)
     private String name;
 
-    @Column(name="content",  nullable = false)
-    private String content;
 
     @Column(name = "title", nullable = false )
     private String title;
@@ -71,12 +69,11 @@ public class QuestionEntity {
     @Column(name = "explanation", nullable = false)
     private String explanation;
 
-    @Column(name = "created_time", nullable = false)
-    private Date created_time;
-
     @Column(name = "category")
     private String category;
 
 
+    @OneToMany(mappedBy = "questionEntity")
+    private Set<FavEntity> favEntities;
 
 }
