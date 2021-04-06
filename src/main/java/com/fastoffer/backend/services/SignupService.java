@@ -1,53 +1,47 @@
 package com.fastoffer.backend.services;
 
-import com.fastoffer.backend.dtos.EgoResults;
-import com.fastoffer.backend.dtos.SignupGetDto;
-import com.fastoffer.backend.dtos.SignupPostDto;
-import com.fastoffer.backend.entities.UserEntity;
-import com.fastoffer.backend.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fastoffer.backend.dtos.Signup.SignupGetDto;
+import com.fastoffer.backend.dtos.Signup.SignupPostDto;
+import com.fastoffer.backend.entities.IntervieweeAccountEntity;
+import com.fastoffer.backend.exceptions.InvalidAccountException;
+import com.fastoffer.backend.repositories.IntervieweeAccountRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class SignupService {
+    private final IntervieweeAccountRepository intervieweeAccountRepository;
 
-    @Autowired
-    UserRepository userRepository;
+    public SignupGetDto createUser(SignupPostDto signupPostDto) {
+        IntervieweeAccountEntity intervieweeAccountEntity = this.mapPostDtoToEntity(signupPostDto);
 
-    public EgoResults createUser(SignupPostDto signupPostDto) {
-        EgoResults egoResults;
-
-        UserEntity userEntity = this.mapPostDtoToEntity(signupPostDto);
-
-        if(userRepository.existsByEmail(signupPostDto.getEmail())){
-            SignupGetDto failInterviewGetDto = new SignupGetDto();
-            failInterviewGetDto.setResult("already exist email");
-            egoResults = EgoResults.error(failInterviewGetDto.getResult());
-            return egoResults;
-        } else {
-            UserEntity savedInterviewEntity = userRepository.save(userEntity);
-            SignupGetDto signupGetDto = this.mapEntityToGetDto(savedInterviewEntity);
-            signupGetDto.setResult("successfully");
-            egoResults = EgoResults.ok(signupGetDto);
-            return egoResults;
+        if(intervieweeAccountRepository.existsByEmail(signupPostDto.getEmail())) {
+            throw new InvalidAccountException("Email already exists");
         }
-}
 
-    private UserEntity mapPostDtoToEntity(SignupPostDto signupPostDto){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setEmail(signupPostDto.getEmail());
-        userEntity.setPassword(signupPostDto.getPassword());
-        return userEntity;
-}
-
-    private SignupGetDto mapEntityToGetDto(UserEntity userEntity){
-        SignupGetDto signupGetDto = new SignupGetDto();
-        signupGetDto.setId(userEntity.getId().toString());
-        signupGetDto.setEmail(userEntity.getEmail());
+        IntervieweeAccountEntity savedIntervieweeEntity = intervieweeAccountRepository.save(intervieweeAccountEntity);
+        SignupGetDto signupGetDto = this.mapEntityToGetDto(savedIntervieweeEntity);
         return signupGetDto;
     }
 
+    /*
+        TODO: Needs to be refactored.
+        1. Class
+        2. Map function
+     */
+
+    private IntervieweeAccountEntity mapPostDtoToEntity(SignupPostDto signupPostDto){
+        IntervieweeAccountEntity intervieweeAccountEntity = new IntervieweeAccountEntity();
+        intervieweeAccountEntity.setEmail(signupPostDto.getEmail());
+        intervieweeAccountEntity.setPassword(signupPostDto.getPassword());
+        return intervieweeAccountEntity;
+    }
+
+    private SignupGetDto mapEntityToGetDto(IntervieweeAccountEntity intervieweeAccountEntity){
+        SignupGetDto signupGetDto = new SignupGetDto();
+        signupGetDto.setInterviewee_id(intervieweeAccountEntity.getInterviewee_id().toString());
+        signupGetDto.setEmail(intervieweeAccountEntity.getEmail());
+        return signupGetDto;
+    }
 }
-//1 名字
-//2 校验
-// 响应码 json文件 {注册成功} or { 失败写具体内容 查 email exist }
