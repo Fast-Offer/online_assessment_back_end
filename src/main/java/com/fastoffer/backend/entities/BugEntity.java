@@ -23,7 +23,7 @@ public class BugEntity {
 
    @ManyToOne
    @JoinColumn(name = "reporter")
-   private UserEntity userEntity;
+   private IntervieweeAccountEntity intervieweeAccountEntity;
 
    @ManyToOne
    @JoinColumn(name = "question_id")

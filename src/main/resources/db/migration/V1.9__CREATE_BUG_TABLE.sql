@@ -10,11 +10,11 @@ CREATE TABLE public.report_bug
 
 ALTER TABLE public.report_bug
     ADD FOREIGN KEY (question_id)
-        REFERENCES public.question (id)
+        REFERENCES public.question (question_id)
         NOT VALID;
 
 
 ALTER TABLE public.report_bug
     ADD FOREIGN KEY (reporter)
-        REFERENCES public.user_account (id)
+        REFERENCES public.interviewee_account (interviewee_id)
         NOT VALID;

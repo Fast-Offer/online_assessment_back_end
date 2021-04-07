@@ -6,7 +6,7 @@ import com.fastoffer.backend.entities.BugEntity;
 import com.fastoffer.backend.entities.QuestionEntity;
 import com.fastoffer.backend.repositories.BugRepository;
 import com.fastoffer.backend.repositories.QuestionRepository;
-import com.fastoffer.backend.repositories.UserRepository;
+import com.fastoffer.backend.repositories.IntervieweeAccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class BugServices {
 
     private final BugRepository bugRepository;
 
-    private final UserRepository userRepository;
+    private final IntervieweeAccountRepository intervieweeAccountRepository;
 
     private final QuestionRepository questionRepository;
 
@@ -29,7 +29,7 @@ public class BugServices {
 
     private BugEntity mapPostDtoToEntity(BugPostDto bugPostDto) {
         BugEntity bugEntity = new BugEntity();
-        bugEntity.setUserEntity(userRepository.findById(bugPostDto.getIntervieweeID()).get());
+        bugEntity.setIntervieweeAccountEntity(intervieweeAccountRepository.findById(bugPostDto.getIntervieweeID()).get());
         bugEntity.setQuestionEntity(questionRepository.findById(bugPostDto.getQuestionID()).get());
         bugEntity.setDescription(bugPostDto.getBugContent());
 
@@ -39,8 +39,8 @@ public class BugServices {
     private BugGetDto mapEntityToGetDto(BugEntity bugEntity) {
         BugGetDto bugGetDto = new BugGetDto();
         bugGetDto.setId(bugEntity.getId());
-        bugGetDto.setReporter(bugEntity.getUserEntity().getId());
-        bugGetDto.setQuestionID(bugEntity.getQuestionEntity().getId());
+        bugGetDto.setReporter(bugEntity.getIntervieweeAccountEntity().getInterviewee_id());
+        bugGetDto.setQuestionID(bugEntity.getQuestionEntity().getQuestion_id());
         bugGetDto.setReportTime(bugEntity.getTimestamp());
 
         return bugGetDto;
