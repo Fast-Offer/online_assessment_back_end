@@ -3,11 +3,11 @@ package com.fastoffer.backend.services;
 import com.fastoffer.backend.dtos.FavGetDto;
 import com.fastoffer.backend.dtos.FavPostDto;
 import com.fastoffer.backend.entities.FavEntity;
+import com.fastoffer.backend.entities.IntervieweeAccountEntity;
 import com.fastoffer.backend.entities.QuestionEntity;
-import com.fastoffer.backend.entities.UserEntity;
 import com.fastoffer.backend.repositories.FavRepository;
+import com.fastoffer.backend.repositories.IntervieweeAccountRepository;
 import com.fastoffer.backend.repositories.QuestionRepository;
-import com.fastoffer.backend.repositories.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -21,7 +21,7 @@ public class FavService {
 
     private final QuestionRepository questionRepository;
 
-    private final UserRepository userRepository;
+    private final IntervieweeAccountRepository intervieweeAccountRepository;
 
     public FavGetDto createFav(FavPostDto favPostDto) {
         FavEntity favEntity = favRepository.save(this.mapPostDtoToEntity(favPostDto));
@@ -31,9 +31,9 @@ public class FavService {
 
     private FavEntity mapPostDtoToEntity (FavPostDto favPostDto) {
         FavEntity favEntity = new FavEntity();
-        UserEntity userEntity = userRepository.findById(favPostDto.getIntervieweeID()).get();
+        IntervieweeAccountEntity intervieweeAccountEntity = intervieweeAccountRepository.findById(favPostDto.getIntervieweeID()).get();
         QuestionEntity questionEntity = questionRepository.findById(favPostDto.getQuestionID()).get();
-        favEntity.setUserEntity(userEntity);
+        favEntity.setIntervieweeAccountEntity(intervieweeAccountEntity);
         favEntity.setQuestionEntity(questionEntity);
 
         return favEntity;
@@ -41,8 +41,8 @@ public class FavService {
 
     private FavGetDto mapEntityToGetDto (FavEntity favEntity) {
         FavGetDto favGetDto = new FavGetDto();
-        favGetDto.setQuestion_id(favEntity.getQuestionEntity().getId());
-        favGetDto.setInterviewee_account_id(favEntity.getUserEntity().getId());
+        favGetDto.setQuestion_id(favEntity.getQuestionEntity().getQuestion_id());
+        favGetDto.setInterviewee_account_id(favEntity.getIntervieweeAccountEntity().getInterviewee_id());
         favGetDto.setId(favEntity.getId());
         favGetDto.setTimestamp(favEntity.getTimestamp());
 

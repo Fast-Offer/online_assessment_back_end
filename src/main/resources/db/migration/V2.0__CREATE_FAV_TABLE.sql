@@ -10,11 +10,11 @@ CREATE TABLE public.fav
 
 ALTER TABLE public.fav
     ADD FOREIGN KEY (interviewee_account_id)
-        REFERENCES public.user_account (id)
+        REFERENCES public.interviewee_account (interviewee_id)
     NOT VALID;
 
 
 ALTER TABLE public.fav
     ADD FOREIGN KEY (question_id)
-        REFERENCES public.question (id)
+        REFERENCES public.question (question_id)
     NOT VALID;

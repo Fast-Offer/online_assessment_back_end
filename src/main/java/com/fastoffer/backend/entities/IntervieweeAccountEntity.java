@@ -12,25 +12,25 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
-@Table(name = "user_account")
+@Table(name = "interviewee_account")
 
-public class UserEntity {
+public class IntervieweeAccountEntity {
+
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
-
-    private UUID id;
+    private UUID interviewee_id;
 
     @Column(name="email", unique = true, nullable = false)
     private String email;
-    @Column(name="password", unique = false, nullable = false)
+
+    @Column(name="password", nullable = false)
     private String password;
 
+    @OneToMany(mappedBy = "intervieweeAccountEntity")
+    private Set<RedoEntity> redoEntitySet;
 
-    @ManyToMany(mappedBy = "userEntities")
-    private Set<QuestionEntity> questionEntities;
-
-    @OneToMany(mappedBy = "userEntity")
+    @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<FavEntity> favEntities;
 
 }
