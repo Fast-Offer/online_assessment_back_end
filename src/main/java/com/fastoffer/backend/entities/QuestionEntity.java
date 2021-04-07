@@ -9,10 +9,13 @@ import java.sql.Timestamp;
 import java.util.Set;
 import java.util.UUID;
 
+import java.util.Date;
+
 @Entity
 @Setter
 @Getter
 @Table(name = "question")
+
 public class QuestionEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
@@ -46,9 +49,6 @@ public class QuestionEntity {
     @Column(name = "created_time", nullable = false)
     private Timestamp created_time;
 
-    @Column(name = "category")
-    private String category;
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionEntity")
     private Set<RedoEntity> redoEntitySet;
 
@@ -72,4 +72,6 @@ public class QuestionEntity {
 //
 ////`    @Column(name="question_id", unique = true, nullable = false)
 ////    private UUID question_id;`
+    @OneToMany(mappedBy = "questionEntity")
+    private Set<BugEntity> bugEntities;
 }

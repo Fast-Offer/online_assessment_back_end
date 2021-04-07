@@ -29,4 +29,8 @@ public class IntervieweeAccountEntity {
 
     @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<RedoEntity> redoEntitySet;
+
+    @OneToMany(mappedBy = "intervieweeAccountEntity")
+    private Set<BugEntity> bugEntities;
+
 }
