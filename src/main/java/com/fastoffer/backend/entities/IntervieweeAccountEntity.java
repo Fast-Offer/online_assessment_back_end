@@ -13,7 +13,6 @@ import java.util.UUID;
 @Setter
 @Getter
 @Table(name = "interviewee_account")
-
 public class IntervieweeAccountEntity {
 
     @Id
@@ -21,7 +20,7 @@ public class IntervieweeAccountEntity {
     @GenericGenerator(name="uuid2",strategy="uuid2")
     private UUID interviewee_id;
 
-    @Column(name="email", unique = true, nullable = false)
+    @Column(name="email", unique = true)
     private String email;
 
     @Column(name="password", nullable = false)

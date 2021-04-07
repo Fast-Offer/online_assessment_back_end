@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/signup")
 @RequiredArgsConstructor
 public class SignupController {
-    SignupService signupService;
+
+    private final SignupService signupService;
 
     @PostMapping
     public ResponseEntity<SignupGetDto> createUser(@RequestBody SignupPostDto signupPostDto){
