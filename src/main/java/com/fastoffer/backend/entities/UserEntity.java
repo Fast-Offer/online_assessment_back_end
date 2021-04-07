@@ -30,7 +30,7 @@ public class UserEntity {
     @ManyToMany(mappedBy = "userEntities")
     private Set<QuestionEntity> questionEntities;
 
-
-
+    @OneToMany(mappedBy = "userEntity")
+    private Set<BugEntity> bugEntities;
 
 }
