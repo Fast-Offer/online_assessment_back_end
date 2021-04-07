@@ -52,6 +52,8 @@ public class QuestionEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionEntity")
     private Set<RedoEntity> redoEntitySet;
 
+    @OneToMany(mappedBy = "questionEntity")
+    private Set<FavEntity> favEntities;
 
 
 //    @ManyToMany
