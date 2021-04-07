@@ -9,6 +9,4 @@ public class RedoGetDto {
     private String title;
     private String category;
     private String status;
-
-
 }
