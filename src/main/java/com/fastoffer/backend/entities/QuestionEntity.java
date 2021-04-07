@@ -74,4 +74,6 @@ public class QuestionEntity {
 //
 ////`    @Column(name="question_id", unique = true, nullable = false)
 ////    private UUID question_id;`
+    @OneToMany(mappedBy = "questionEntity")
+    private Set<BugEntity> bugEntities;
 }

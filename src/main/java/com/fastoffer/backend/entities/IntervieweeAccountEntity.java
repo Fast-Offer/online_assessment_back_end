@@ -32,5 +32,5 @@ public class IntervieweeAccountEntity {
 
     @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<FavEntity> favEntities;
-
+    private Set<BugEntity> bugEntities;
 }
