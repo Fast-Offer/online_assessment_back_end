@@ -6,6 +6,8 @@ com/fastoffer/backend/repositories/RedoRepository.java
  com.fastoffer.backend.repositories.RedoRepository
 com/fastoffer/backend/entities/IntervieweeProfileEntity.java
  com.fastoffer.backend.entities.IntervieweeProfileEntity
+com/fastoffer/backend/services/LoginService.java
+ com.fastoffer.backend.services.LoginService
 com/fastoffer/backend/dtos/IntervieweeProfile/IntervieweeProfileGetDto.java
  com.fastoffer.backend.dtos.IntervieweeProfile.IntervieweeProfileGetDto
 com/fastoffer/backend/dtos/Redo/RedoGetDto.java
@@ -22,6 +24,8 @@ com/fastoffer/backend/dtos/Signup/SignupGetDto.java
  com.fastoffer.backend.dtos.Signup.SignupGetDto
 com/fastoffer/backend/entities/RedoEntity.java
  com.fastoffer.backend.entities.RedoEntity
+com/fastoffer/backend/entities/QuestionEntity.java
+ com.fastoffer.backend.entities.QuestionEntity
 com/fastoffer/backend/repositories/IntervieweeProfileRepository.java
  com.fastoffer.backend.repositories.IntervieweeProfileRepository
 com/fastoffer/backend/BackendApplication.java
@@ -38,12 +42,14 @@ com/fastoffer/backend/repositories/IntervieweeAccountRepository.java
  com.fastoffer.backend.repositories.IntervieweeAccountRepository
 com/fastoffer/backend/entities/IntervieweeAccountEntity.java
  com.fastoffer.backend.entities.IntervieweeAccountEntity
-com/fastoffer/backend/entities/QuestionEntity.java
- com.fastoffer.backend.entities.QuestionEntity
-com/fastoffer/backend/services/LoginService.java
- com.fastoffer.backend.services.LoginService
 com/fastoffer/backend/mapper/SignupMapper.java
  com.fastoffer.backend.mapper.SignupMapper
+com/fastoffer/backend/services/IntervieweeService.java
+ com.fastoffer.backend.services.IntervieweeService
+com/fastoffer/backend/controllers/IntervieweeProfileController.java
+ com.fastoffer.backend.controllers.IntervieweeProfileController
+com/fastoffer/backend/mapper/IntervieweeProfileMapper.java
+ com.fastoffer.backend.mapper.IntervieweeProfileMapper
 com/fastoffer/backend/services/SignupService.java
  com.fastoffer.backend.services.SignupService
 com/fastoffer/backend/controllers/SignupController.java

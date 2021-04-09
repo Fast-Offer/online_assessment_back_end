@@ -3,10 +3,10 @@ package com.fastoffer.backend.mapper;
 import com.fastoffer.backend.dtos.Signup.SignupGetDto;
 import com.fastoffer.backend.dtos.Signup.SignupPostDto;
 import com.fastoffer.backend.entities.IntervieweeAccountEntity;
-import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring",injectionStrategy = InjectionStrategy.FIELD)
+@Mapper(componentModel = "spring")
 public interface SignupMapper {
     IntervieweeAccountEntity toEntity(SignupPostDto signupPostDto);
 

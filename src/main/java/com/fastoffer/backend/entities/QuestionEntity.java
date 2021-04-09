@@ -17,7 +17,8 @@ public class QuestionEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
-    private UUID question_id;
+    @Column(name = "question_id")
+    private UUID questionId;
 
     @Column(name="creator",  nullable = false)
     private String creator;
@@ -26,28 +27,25 @@ public class QuestionEntity {
     private String title;
 
     @Column(name = "option_a", nullable = false)
-    private String option_a;
+    private String optionA;
 
     @Column(name = "option_b", nullable = false)
-    private String option_b;
+    private String optionB;
 
     @Column(name = "option_c", nullable = false)
-    private String option_c;
+    private String optionC;
 
     @Column(name = "option_d", nullable = false)
-    private String option_d;
+    private String optionD;
 
     @Column(name = "correct_option", nullable = false)
-    private String correct_option;
+    private String correctOption;
 
     @Column(name = "explanation", nullable = false)
     private String explanation;
 
     @Column(name = "created_time", nullable = false)
-    private Timestamp created_time;
-
-    @Column(name = "category")
-    private String category;
+    private Timestamp createdTime;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "questionEntity")
     private Set<RedoEntity> redoEntitySet;

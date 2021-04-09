@@ -4,7 +4,9 @@ import lombok.Data;
 
 @Data
 public class SignupPostDto {
+
     private String email;
+
     private String password;
 }
 

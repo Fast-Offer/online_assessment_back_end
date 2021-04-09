@@ -18,6 +18,7 @@ public class SignupService {
     private final SignupMapper signupMapper;
 
     public SignupGetDto createUser(SignupPostDto signupPostDto) {
+
         if(intervieweeAccountRepository.existsByEmail(signupPostDto.getEmail())) {
             throw new InvalidAccountException("Email already exists");
         }

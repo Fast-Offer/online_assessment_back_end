@@ -18,7 +18,8 @@ public class IntervieweeAccountEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
-    private UUID interviewee_id;
+    @Column(name = "interviewee_id", nullable = false)
+    private UUID intervieweeId;
 
     @Column(name="email", unique = true)
     private String email;
@@ -26,6 +27,7 @@ public class IntervieweeAccountEntity {
     @Column(name="password", nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "intervieweeAccountEntity")
-    private Set<RedoEntity> redoEntitySet;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id", referencedColumnName = "profile_id")
+    private IntervieweeProfileEntity intervieweeProfileEntity;
 }
