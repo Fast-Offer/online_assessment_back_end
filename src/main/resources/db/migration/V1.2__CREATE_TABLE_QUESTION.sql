@@ -8,6 +8,7 @@ CREATE TABLE question (
     option_d VARCHAR(500),
     correct_option VARCHAR(10),
     explanation VARCHAR(500),
+    category VARCHAR(500),
     created_time TIMESTAMP NOT NULL,
     FOREIGN KEY (creator) REFERENCES company_account(company_id)
 );
