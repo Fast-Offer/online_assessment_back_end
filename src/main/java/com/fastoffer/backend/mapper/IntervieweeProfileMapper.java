@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
 
-@Mapper(componentModel = "Spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "Spring")
 public interface IntervieweeProfileMapper {
     IntervieweeProfileEntity toEntity(IntervieweeProfilePostDto intervieweeProfilePostDto);
 

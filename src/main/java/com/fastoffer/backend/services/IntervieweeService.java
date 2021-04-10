@@ -28,19 +28,19 @@ public class IntervieweeService {
 
     @Transactional
     public IntervieweeProfileGetDto createIntervieweeProfile(IntervieweeProfilePostDto intervieweeProfilePostDto) {
+        IntervieweeProfileEntity intervieweeProfileEntity = intervieweeProfileMapper.toEntity(intervieweeProfilePostDto);
 
-        if(intervieweeAccountRepository.existsByIntervieweeId(intervieweeProfilePostDto.getAccountId())) {
-            IntervieweeProfileEntity intervieweeProfileEntity = intervieweeProfileMapper.toEntity(intervieweeProfilePostDto);
+        IntervieweeAccountEntity intervieweeAccountEntity = intervieweeAccountRepository.findById(intervieweeProfilePostDto.getAccountId()).get();
 
-            IntervieweeAccountEntity intervieweeAccountEntity = intervieweeAccountRepository.findById(intervieweeProfilePostDto.getAccountId()).get();
+        if(intervieweeAccountEntity != null) {
+
             intervieweeProfileEntity.setIntervieweeAccountEntity(intervieweeAccountEntity);
             IntervieweeProfileEntity savedIntervieweeProfileEntity = intervieweeProfileRepository.save(intervieweeProfileEntity);
 
-            //TODO: Set the profileId in IntervieweeAccoount table
-            IntervieweeProfileGetDto intervieweeProfileGetDto = intervieweeProfileMapper.fromEntity(savedIntervieweeProfileEntity);
-            intervieweeAccountRepository.modifyIntervieweeProfileId(intervieweeProfileGetDto.getProfileId(), intervieweeProfilePostDto.getAccountId());
+            //Set the profileId in IntervieweeAccoount table
+            intervieweeAccountRepository.modifyIntervieweeProfileId(savedIntervieweeProfileEntity.getProfileId(), intervieweeProfilePostDto.getAccountId());
 
-            return intervieweeProfileGetDto;
+            return intervieweeProfileMapper.fromEntity(savedIntervieweeProfileEntity);
         }
 
         throw new InvalidAccountException("User does not exists, please sign up first");

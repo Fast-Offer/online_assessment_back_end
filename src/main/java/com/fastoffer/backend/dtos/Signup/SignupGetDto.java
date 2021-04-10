@@ -7,7 +7,7 @@ import java.util.UUID;
 @Data
 public class SignupGetDto {
 
-    private UUID intervieweeId;
+    private UUID accountId;
 
     private String email;
 }

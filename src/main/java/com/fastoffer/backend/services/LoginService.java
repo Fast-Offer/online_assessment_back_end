@@ -25,7 +25,7 @@ public class LoginService {
         if(intervieweeAccountRepository.existsByEmail(loginPostDto.getEmail()) &&
                 intervieweeAccountEntity.getPassword().equals(loginPostDto.getPassword())){
 
-            loginGetDto.setIntervieweeId(intervieweeAccountEntity.getIntervieweeId());
+            loginGetDto.setAccountId(intervieweeAccountEntity.getAccountId());
             loginGetDto.setEmail(intervieweeAccountEntity.getEmail());
             return loginGetDto;
         }

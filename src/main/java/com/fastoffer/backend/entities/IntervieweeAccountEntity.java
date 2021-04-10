@@ -19,7 +19,7 @@ public class IntervieweeAccountEntity {
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
     @Column(name = "interviewee_id", nullable = false)
-    private UUID intervieweeId;
+    private UUID accountId;
 
     @Column(name="email", unique = true)
     private String email;
