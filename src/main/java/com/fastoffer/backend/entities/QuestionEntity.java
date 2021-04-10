@@ -44,6 +44,9 @@ public class QuestionEntity {
     @Column(name = "explanation", nullable = false)
     private String explanation;
 
+    @Column(name = "category", nullable = false)
+    private String category;
+
     @Column(name = "created_time", nullable = false)
     private Timestamp createdTime;
 

@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.UUID;
 
 public interface RedoRepository extends JpaRepository <RedoEntity, UUID> {
-//    @Query(nativeQuery = true, value = "SELECT Cast(question_id as varchar) question_id FROM " +
-//            "redo r WHERE r.user_id = :id")
-//    List<UUID[]> findQuestionIdByUserId(@Param("id") UUID id);
+    @Query(nativeQuery = true, value = "SELECT Cast(redo_question_id as varchar) redo_question_id , q.title , q.title FROM " +
+            "redo r LEFT JOIN question q ON r.redo_question_id = q.question_id WHERE r.redo_interviewee_id = :id")
+    List<Object[]> findQuestionIdByUserId(@Param("id") UUID id);
 
-//    public boolean existsByIntervieweeAccountEntity(UUID account_id);
+    public boolean existsByIntervieweeAccountEntity(UUID account_id);
 }
