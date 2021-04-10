@@ -14,6 +14,8 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
 @RequiredArgsConstructor
 public class IntervieweeService {
@@ -24,16 +26,21 @@ public class IntervieweeService {
 
     private final IntervieweeProfileMapper intervieweeProfileMapper;
 
+    @Transactional
     public IntervieweeProfileGetDto createIntervieweeProfile(IntervieweeProfilePostDto intervieweeProfilePostDto) {
 
         if(intervieweeAccountRepository.existsByIntervieweeId(intervieweeProfilePostDto.getAccountId())) {
-//            IntervieweeProfileEntity intervieweeProfileEntity = new IntervieweeProfileEntity();
             IntervieweeProfileEntity intervieweeProfileEntity = intervieweeProfileMapper.toEntity(intervieweeProfilePostDto);
-            intervieweeProfileEntity.setIntervieweeAccountEntity(intervieweeAccountRepository.findById(intervieweeProfilePostDto.getAccountId()).get());
-            IntervieweeProfileEntity savedIntervieweeProfileEntity = intervieweeProfileRepository.save(intervieweeProfileMapper.toEntity(intervieweeProfilePostDto));
 
+            IntervieweeAccountEntity intervieweeAccountEntity = intervieweeAccountRepository.findById(intervieweeProfilePostDto.getAccountId()).get();
+            intervieweeProfileEntity.setIntervieweeAccountEntity(intervieweeAccountEntity);
+            IntervieweeProfileEntity savedIntervieweeProfileEntity = intervieweeProfileRepository.save(intervieweeProfileEntity);
 
-            return intervieweeProfileMapper.fromEntity(savedIntervieweeProfileEntity);
+            //TODO: Set the profileId in IntervieweeAccoount table
+            IntervieweeProfileGetDto intervieweeProfileGetDto = intervieweeProfileMapper.fromEntity(savedIntervieweeProfileEntity);
+            intervieweeAccountRepository.modifyIntervieweeProfileId(intervieweeProfileGetDto.getProfileId(), intervieweeProfilePostDto.getAccountId());
+
+            return intervieweeProfileGetDto;
         }
 
         throw new InvalidAccountException("User does not exists, please sign up first");

@@ -2,8 +2,12 @@ package com.fastoffer.backend.dtos.IntervieweeProfile;
 
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
 public class IntervieweeProfileGetDto {
+
+    private UUID profileId;
 
     private String name;
 
