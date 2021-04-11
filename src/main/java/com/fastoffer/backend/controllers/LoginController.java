@@ -1,36 +1,25 @@
 package com.fastoffer.backend.controllers;
 
-import com.fastoffer.backend.dtos.EgoResults;
-import com.fastoffer.backend.dtos.LoginPostDto;
+import com.fastoffer.backend.dtos.Login.LoginGetDto;
+import com.fastoffer.backend.dtos.Login.LoginPostDto;
 import com.fastoffer.backend.services.LoginService;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/login")
 public class LoginController {
-    @Autowired
-    LoginService LoginService;
+    private final LoginService loginService;
 
-
-//    @PostMapping
-//    public ResponseEntity<Map<String, Integer>> checkPassword(@RequestBody LoginPostDto loginPostDto){
-//        EgoResults egoResults= LoginService.verifyLogin(loginPostDto);
-//        Map<String,Integer> map = new HashMap<String,Integer>();
-//        map.put(egoResults.getMsg(),egoResults.getStatus());
-//        return ResponseEntity.ok(map);
-//    }
-@PostMapping
-public ResponseEntity<EgoResults> checkPassword(@RequestBody LoginPostDto loginPostDto){
-    EgoResults egoResults= LoginService.verifyLogin(loginPostDto);
-    return ResponseEntity.ok(egoResults);
-}
-
+    @PostMapping
+    public ResponseEntity<LoginGetDto> createUser(@RequestBody LoginPostDto loginPostDto){
+        return ResponseEntity.ok(loginService.verifyLogin(loginPostDto));
+    }
 }
