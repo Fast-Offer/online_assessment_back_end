@@ -6,6 +6,6 @@ import java.util.UUID;
 
 @Data
 public class FavPostDto {
-    private UUID intervieweeID;
+    private UUID accountID;
     private UUID questionID;
 }
