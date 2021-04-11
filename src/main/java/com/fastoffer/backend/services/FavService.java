@@ -31,7 +31,7 @@ public class FavService {
 
     private FavEntity mapPostDtoToEntity (FavPostDto favPostDto) {
         FavEntity favEntity = new FavEntity();
-        IntervieweeAccountEntity intervieweeAccountEntity = intervieweeAccountRepository.findById(favPostDto.getIntervieweeID()).get();
+        IntervieweeAccountEntity intervieweeAccountEntity = intervieweeAccountRepository.findById(favPostDto.getAccountID()).get();
         QuestionEntity questionEntity = questionRepository.findById(favPostDto.getQuestionID()).get();
         favEntity.setIntervieweeAccountEntity(intervieweeAccountEntity);
         favEntity.setQuestionEntity(questionEntity);
@@ -41,8 +41,8 @@ public class FavService {
 
     private FavGetDto mapEntityToGetDto (FavEntity favEntity) {
         FavGetDto favGetDto = new FavGetDto();
-        favGetDto.setQuestion_id(favEntity.getQuestionEntity().getQuestion_id());
-        favGetDto.setInterviewee_account_id(favEntity.getIntervieweeAccountEntity().getInterviewee_id());
+        favGetDto.setQuestionId(favEntity.getQuestionEntity().getQuestionId());
+        favGetDto.setIntervieweeAccountId(favEntity.getIntervieweeAccountEntity().getAccountId());
         favGetDto.setId(favEntity.getId());
         favGetDto.setTimestamp(favEntity.getTimestamp());
 

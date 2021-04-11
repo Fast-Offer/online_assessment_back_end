@@ -7,7 +7,7 @@ import java.util.UUID;
 @Data
 public class BugPostDto {
 
-    private UUID intervieweeID;
+    private UUID accountID;
 
     private UUID questionID;
 

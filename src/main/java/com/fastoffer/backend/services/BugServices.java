@@ -29,7 +29,7 @@ public class BugServices {
 
     private BugEntity mapPostDtoToEntity(BugPostDto bugPostDto) {
         BugEntity bugEntity = new BugEntity();
-        bugEntity.setIntervieweeAccountEntity(intervieweeAccountRepository.findById(bugPostDto.getIntervieweeID()).get());
+        bugEntity.setIntervieweeAccountEntity(intervieweeAccountRepository.findById(bugPostDto.getAccountID()).get());
         bugEntity.setQuestionEntity(questionRepository.findById(bugPostDto.getQuestionID()).get());
         bugEntity.setDescription(bugPostDto.getBugContent());
 
@@ -39,8 +39,8 @@ public class BugServices {
     private BugGetDto mapEntityToGetDto(BugEntity bugEntity) {
         BugGetDto bugGetDto = new BugGetDto();
         bugGetDto.setId(bugEntity.getId());
-        bugGetDto.setReporter(bugEntity.getIntervieweeAccountEntity().getInterviewee_id());
-        bugGetDto.setQuestionID(bugEntity.getQuestionEntity().getQuestion_id());
+        bugGetDto.setReporter(bugEntity.getIntervieweeAccountEntity().getAccountId());
+        bugGetDto.setQuestionID(bugEntity.getQuestionEntity().getQuestionId());
         bugGetDto.setReportTime(bugEntity.getTimestamp());
 
         return bugGetDto;

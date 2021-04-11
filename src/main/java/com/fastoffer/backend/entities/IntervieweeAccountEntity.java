@@ -14,8 +14,6 @@ import java.util.UUID;
 @Getter
 @Table(name = "interviewee_account")
 public class IntervieweeAccountEntity {
-
-public class UserEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
@@ -31,10 +29,13 @@ public class UserEntity {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "profile_id", referencedColumnName = "profile_id")
     private IntervieweeProfileEntity intervieweeProfileEntity;
+    
     @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<RedoEntity> redoEntitySet;
 
     @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<FavEntity> favEntities;
+
+    @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<BugEntity> bugEntities;
 }
