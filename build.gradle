@@ -14,6 +14,7 @@ ext {
     flywayVersion = "7.6.0"
     mockitoVersion = '3.5.15'
     mapstructVersion = '1.4.2.Final'
+
 }
 
 
