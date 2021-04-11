@@ -2,14 +2,25 @@ package com.fastoffer.backend.dtos.IntervieweeProfile;
 
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
 public class IntervieweeProfilePostDto {
-    private String interviewee_id; // interviewee_id should be inserted by frontend
+
+    private UUID accountId;
+//    private String email;
+
     private String name;
+
     private String age;
+
     private String avatar;
-    private String self_introduction;
+
+    private String selfIntroduction;
+
     private String phone;
+
     private String website;
+
     private String location;
 }

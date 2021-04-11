@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/signup")
 @RequiredArgsConstructor
 public class SignupController {
+
     private final SignupService signupService;
 
     @PostMapping
