@@ -2,8 +2,12 @@ package com.fastoffer.backend.dtos.Signup;
 
 import lombok.Data;
 
+import java.util.UUID;
+
 @Data
 public class SignupGetDto {
-    private String interviewee_id;
+
+    private UUID accountId;
+
     private String email;
 }

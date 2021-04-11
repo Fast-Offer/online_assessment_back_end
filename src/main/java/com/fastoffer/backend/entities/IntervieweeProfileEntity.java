@@ -2,6 +2,8 @@ package com.fastoffer.backend.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -10,16 +12,17 @@ import java.util.UUID;
 @Setter
 @Getter
 @Table(name = "interviewee_profile")
-
 public class IntervieweeProfileEntity {
     @Id
-    private UUID profile_id;
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(name = "profile_id")
+    private UUID profileId;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "profile_interviewee_id", referencedColumnName = "interviewee_id")
-    private IntervieweeAccountEntity intervieweeAccountEntity;
+//    @Column(name = "profile_interviewee_id")
+//    private UUID profile_interviewee_id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String name;
 
     @Column(name = "age")
@@ -29,7 +32,7 @@ public class IntervieweeProfileEntity {
     private String avatar;
 
     @Column(name = "self_introduction")
-    private String self_introduction;
+    private String selfIntroduction;
 
     @Column(name = "phone")
     private String phone;
@@ -39,4 +42,8 @@ public class IntervieweeProfileEntity {
 
     @Column(name = "location")
     private String location;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "profile_id")
+    private IntervieweeAccountEntity intervieweeAccountEntity;
 }

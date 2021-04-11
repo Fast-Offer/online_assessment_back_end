@@ -17,7 +17,7 @@ public class RedoEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    private String redo_id;
+    private String redoId;
 
     @ManyToOne
     @JoinColumn(name = "redo_interviewee_id", referencedColumnName = "interviewee_id")
@@ -28,5 +28,5 @@ public class RedoEntity {
     private QuestionEntity questionEntity;
 
     @Column(name = "time_stamp", nullable = false)
-    private Timestamp time_stamp;
+    private Timestamp timeStamp;
 }

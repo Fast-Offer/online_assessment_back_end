@@ -13,20 +13,24 @@ import java.util.UUID;
 @Setter
 @Getter
 @Table(name = "interviewee_account")
-
 public class IntervieweeAccountEntity {
 
+public class UserEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
-    private UUID interviewee_id;
+    @Column(name = "interviewee_id", nullable = false)
+    private UUID accountId;
 
-    @Column(name="email", unique = true, nullable = false)
+    @Column(name="email", unique = true)
     private String email;
 
     @Column(name="password", nullable = false)
     private String password;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id", referencedColumnName = "profile_id")
+    private IntervieweeProfileEntity intervieweeProfileEntity;
     @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<RedoEntity> redoEntitySet;
 
