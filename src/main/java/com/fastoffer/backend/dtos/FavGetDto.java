@@ -10,9 +10,9 @@ public class FavGetDto {
 
     private UUID id;
 
-    private UUID question_id;
+    private UUID questionId;
 
-    private UUID interviewee_account_id;
+    private UUID intervieweeAccountId;
 
     private Timestamp timestamp;
 }
