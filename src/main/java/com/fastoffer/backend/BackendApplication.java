@@ -1,7 +1,10 @@
 package com.fastoffer.backend;
 
 import com.fastoffer.backend.entities.CollectionEntity;
+import com.fastoffer.backend.entities.IntervieweeAccountEntity;
 import com.fastoffer.backend.repositories.CollectionRepository;
+import com.fastoffer.backend.repositories.IntervieweeAccountRepository;
+import com.fastoffer.backend.repositories.IntervieweeProfileRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,23 +19,18 @@ public class BackendApplication {
         SpringApplication.run(BackendApplication.class, args);
     }
 
-//    @Bean
-//    CommandLineRunner commandLineRunner(CollectionRepository collectionRepository) {
-//        return args -> {
-//            CollectionEntity collectionEntity = new CollectionEntity(
-//                    UUID.randomUUID(),
-//                    UUID.randomUUID(),
-//                    "http://dummyimage.com/187x100.png/ff4444/ffffff",
-//                    "Chatterbridge",
-//                    "Other specified injury of brachial artery, left side, sequela",
-//                    "23:18",
-//                    true,
-//                    "Khaki",
-//                    "Mitsubishi",
-//                    "{0bac1b74-ee2f-4dfe-812c-bffcaab0190c,'0bac1b74-ee2f-4dfe-812c-bffcaab0190c','0bac1b74-ee2f-4dfe-812c-bffcaab0190c'}"
-//            );
-//            collectionRepository.save(collectionEntity);
-//        };
-//    }
+    @Bean
+    CommandLineRunner commandLineRunner(IntervieweeAccountRepository intervieweeAccountRepository, IntervieweeProfileRepository intervieweeProfileRepository) {
+        return args -> {
+//            intervieweeAccountRepository.findById(UUID.fromString("1b374a97-c04d-43d0-9532-939bcabbdbc5"))
+//                    .ifPresent(System.out::println);
+            intervieweeProfileRepository.findById(UUID.fromString("966b5ba1-5ae4-4461-a581-1d2a116ee2b4"))
+                    .ifPresent(ip -> {
+                        IntervieweeAccountEntity intervieweeAccountEntity = ip.getIntervieweeAccountEntity();
+                        System.out.println("Fetch Lazy...");
+                        System.out.println(intervieweeAccountEntity);
+                    });
+        };
+    }
 
 }

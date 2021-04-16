@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface QuestionRepository extends JpaRepository <QuestionEntity, UUID> {
+    QuestionEntity findByQuestionId(UUID id);
 //    QuestionEntity findAllById(UUID id);
 
 }
