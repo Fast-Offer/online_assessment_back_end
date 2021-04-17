@@ -1,9 +1,6 @@
 package com.fastoffer.backend.mapper;
 
 import com.fastoffer.backend.dtos.Redo.RedoGetDto;
-import com.fastoffer.backend.entities.QuestionEntity;
-//import com.fastoffer.backend.entities.RedoEntity;
-//import org.mapstruct.InjectionStrategy;
 import com.fastoffer.backend.entities.RedoQuestionEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

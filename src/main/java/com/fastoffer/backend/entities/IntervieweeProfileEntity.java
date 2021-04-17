@@ -1,9 +1,11 @@
 package com.fastoffer.backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
+import org.junit.runners.Parameterized;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -16,11 +18,7 @@ public class IntervieweeProfileEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(name = "profile_id")
     private UUID profileId;
-
-//    @Column(name = "profile_interviewee_id")
-//    private UUID profile_interviewee_id;
 
     @Column(name = "name")
     private String name;
@@ -43,7 +41,7 @@ public class IntervieweeProfileEntity {
     @Column(name = "location")
     private String location;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "profile_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "interviewee_id",referencedColumnName = "interviewee_id")
     private IntervieweeAccountEntity intervieweeAccountEntity;
 }

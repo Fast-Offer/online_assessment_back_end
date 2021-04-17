@@ -1,7 +1,7 @@
 package com.fastoffer.backend.controllers;
 
-import com.fastoffer.backend.dtos.FavGetDto;
-import com.fastoffer.backend.dtos.FavPostDto;
+import com.fastoffer.backend.dtos.Fav.FavGetDto;
+import com.fastoffer.backend.dtos.Fav.FavPostDto;
 import com.fastoffer.backend.services.FavService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

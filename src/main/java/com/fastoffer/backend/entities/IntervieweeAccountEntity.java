@@ -3,7 +3,7 @@ package com.fastoffer.backend.entities;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
+//import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -26,9 +26,9 @@ public class IntervieweeAccountEntity {
     @Column(name="password", nullable = false)
     private String password;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "profile_id", referencedColumnName = "profile_id")
-    private IntervieweeProfileEntity intervieweeProfileEntity;
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "intervieweeAccountEntity")
+//    @PrimaryKeyJoinColumn(name = "interviewee_id", referencedColumnName = "profile_id")
+    private IntervieweeProfileEntity profileEntity;
     
     @OneToMany(mappedBy = "intervieweeAccountEntity")
     private Set<RedoEntity> redoEntitySet;
