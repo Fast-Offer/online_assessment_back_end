@@ -3,7 +3,6 @@ package com.fastoffer.backend.entities;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -19,7 +18,6 @@ public class QuestionEntity {
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name="uuid2",strategy="uuid2")
     @Column(name = "question_id")
-//    @Type(type="pg-uuid")
     private UUID questionId;
 
     @Column(name="creator",  nullable = false)

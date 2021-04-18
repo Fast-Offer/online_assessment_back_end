@@ -6,5 +6,7 @@ CREATE TABLE interviewee_profile (
      self_introduction VARCHAR(500),
      phone VARCHAR,
      website VARCHAR,
-     location VARCHAR
+     location VARCHAR,
+     interviewee_id uuid,
+     FOREIGN KEY (interviewee_id) REFERENCES interviewee_account(interviewee_id)
 );
