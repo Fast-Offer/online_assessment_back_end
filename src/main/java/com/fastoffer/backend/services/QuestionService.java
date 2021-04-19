@@ -21,10 +21,4 @@ public class QuestionService {
         return  questionMapper.fromEntity(questionEntity);
     }
 
-//    public QuestionGetDto deleteQuestion(QuestionPostDto questionPostDto) {
-//        questionRepository.deleteById(questionPostDto.getQuestionId());
-//        QuestionGetDto questionGetDto = new QuestionGetDto();
-//        questionGetDto.setQuestionId(questionPostDto.getQuestionId());
-//        return questionGetDto;
-//    }
 }

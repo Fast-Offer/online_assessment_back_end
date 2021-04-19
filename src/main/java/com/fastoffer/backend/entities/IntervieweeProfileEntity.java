@@ -42,6 +42,6 @@ public class IntervieweeProfileEntity {
     private String location;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "interviewee_id",referencedColumnName = "interviewee_id")
+    @JoinColumn(name = "interviewee_id")
     private IntervieweeAccountEntity intervieweeAccountEntity;
 }

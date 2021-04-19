@@ -1,6 +1,6 @@
 package com.fastoffer.backend.mapper;
 
-import com.fastoffer.backend.dtos.FavQuestion.FavQuestionGetDto;
+import com.fastoffer.backend.dtos.Fav.FavQuestionGetDto;
 import com.fastoffer.backend.entities.FavQuestionEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

@@ -12,5 +12,6 @@ public interface IntervieweeAccountRepository extends JpaRepository<IntervieweeA
     IntervieweeAccountEntity findByEmail(String email);
     boolean existsByEmail(String email);
     IntervieweeAccountEntity findByAccountId(UUID id);
+
 //    boolean existsByAccountId(UUID id);
 }

@@ -1,4 +1,4 @@
-package com.fastoffer.backend.dtos.FavQuestion;
+package com.fastoffer.backend.dtos.Fav;
 
 import lombok.Data;
 
