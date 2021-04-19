@@ -7,6 +7,7 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.UUID;
 
 
 @Setter
@@ -19,7 +20,7 @@ public class RedoEntity {
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
 //    @Type(type="pg-uuid")
-    private String redoId;
+    private UUID redoId;
 
     @ManyToOne
     @JoinColumn(name = "redo_interviewee_id", referencedColumnName = "interviewee_id")

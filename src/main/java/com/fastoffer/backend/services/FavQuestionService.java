@@ -20,7 +20,7 @@ public class FavQuestionService {
     private final FavQuestionRepository favQuestionRepository;
     private final FavQuestionMapper favQuestionMapper;
 
-    public List<FavQuestionGetDto> returnFavQuestionList(FavQuestionPostDto favQuestionPostDto) {
+    public List<FavQuestionGetDto> getFavQuestionList(FavQuestionPostDto favQuestionPostDto) {
 
         Set<FavQuestionEntity> questionSet = favQuestionRepository.findQuestionIdByUserId(favQuestionPostDto.getId());
         //从redo表中拿到这个用户的题目

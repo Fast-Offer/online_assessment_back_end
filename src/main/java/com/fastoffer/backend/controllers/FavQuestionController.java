@@ -21,8 +21,8 @@ public class FavQuestionController {
     private final FavQuestionService favQuestionService;
 
     @PostMapping
-    public ResponseEntity<List<FavQuestionGetDto>> returnFavQuestionList(@RequestBody FavQuestionPostDto favQuestionPostDto) {
-        List<FavQuestionGetDto> favQuestionGetDtoList = favQuestionService.returnFavQuestionList(favQuestionPostDto);
+    public ResponseEntity<List<FavQuestionGetDto>> getFavQuestionList(@RequestBody FavQuestionPostDto favQuestionPostDto) {
+        List<FavQuestionGetDto> favQuestionGetDtoList = favQuestionService.getFavQuestionList(favQuestionPostDto);
         return ResponseEntity.ok(favQuestionGetDtoList);
     }
 }

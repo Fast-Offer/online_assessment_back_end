@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.UUID;
 
 public interface FavQuestionRepository extends JpaRepository<FavQuestionEntity, UUID> {
-    @Query(nativeQuery = true, value = "SELECT Cast(question_id as varchar) question_id , q.title, q.category  FROM " +
+    @Query(nativeQuery = true, value = "SELECT q.question_id , q.title, q.category  FROM " +
             "fav f LEFT JOIN question q ON f.question_id = q.question_id WHERE f.interviewee_account_id = :id")
     Set<FavQuestionEntity> findQuestionIdByUserId(@Param("id") UUID id);
 }

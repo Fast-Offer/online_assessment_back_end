@@ -26,9 +26,14 @@ public class RedoService {
 
         Set<RedoQuestionEntity> questionSet = redoRepository.findQuestionIdByUserId(redoPostDto.getId());
         //从redo表中拿到这个用户的题目
-        return questionSet.stream().map(question -> redoQuestionMapper.fromEntity(question)).collect(Collectors.toList());
 
+        return questionSet.stream().map(question -> redoQuestionMapper.fromEntity(question)).collect(Collectors.toList());
     }
+
+
+//    public RedoGetDto deleteQuestion(RedoPostDto redoPostDto) {
+//
+//    }
 }
 
 

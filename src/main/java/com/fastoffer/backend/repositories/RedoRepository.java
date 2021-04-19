@@ -12,7 +12,7 @@ package com.fastoffer.backend.repositories;
         import java.util.UUID;
 
 public interface RedoRepository extends JpaRepository <RedoQuestionEntity, UUID> {
-    @Query(nativeQuery = true, value = "SELECT Cast(question_id as varchar) question_id , q.title, q.category  FROM " +
+    @Query(nativeQuery = true, value = "SELECT q.question_id , q.title, q.category  FROM " +
             "redo r LEFT JOIN question q ON r.redo_question_id = q.question_id WHERE r.redo_interviewee_id = :id")
     Set<RedoQuestionEntity> findQuestionIdByUserId(@Param("id") UUID id);
 
