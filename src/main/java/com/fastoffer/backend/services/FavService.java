@@ -1,7 +1,7 @@
 package com.fastoffer.backend.services;
 
-import com.fastoffer.backend.dtos.FavGetDto;
-import com.fastoffer.backend.dtos.FavPostDto;
+import com.fastoffer.backend.dtos.Fav.FavGetDto;
+import com.fastoffer.backend.dtos.Fav.FavPostDto;
 import com.fastoffer.backend.entities.FavEntity;
 import com.fastoffer.backend.entities.IntervieweeAccountEntity;
 import com.fastoffer.backend.entities.QuestionEntity;

@@ -1,11 +1,11 @@
 package com.fastoffer.backend.mapper;
 
-import com.fastoffer.backend.dtos.Exam.ExamGetDto;
+import com.fastoffer.backend.dtos.Practice.PracticeGetDto;
 import com.fastoffer.backend.entities.QuestionEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "Spring")
-public interface ExamMapper {
+public interface PracticeMapper {
 
-    ExamGetDto fromEntity(QuestionEntity questionEntity);
+    PracticeGetDto fromEntity(QuestionEntity questionEntity);
 }

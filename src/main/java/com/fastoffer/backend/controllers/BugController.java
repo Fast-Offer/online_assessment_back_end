@@ -1,7 +1,7 @@
 package com.fastoffer.backend.controllers;
 
-import com.fastoffer.backend.dtos.BugGetDto;
-import com.fastoffer.backend.dtos.BugPostDto;
+import com.fastoffer.backend.dtos.Bug.BugGetDto;
+import com.fastoffer.backend.dtos.Bug.BugPostDto;
 import com.fastoffer.backend.services.BugServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

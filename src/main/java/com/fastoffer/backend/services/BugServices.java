@@ -1,9 +1,8 @@
 package com.fastoffer.backend.services;
 
-import com.fastoffer.backend.dtos.BugGetDto;
-import com.fastoffer.backend.dtos.BugPostDto;
+import com.fastoffer.backend.dtos.Bug.BugGetDto;
+import com.fastoffer.backend.dtos.Bug.BugPostDto;
 import com.fastoffer.backend.entities.BugEntity;
-import com.fastoffer.backend.entities.QuestionEntity;
 import com.fastoffer.backend.repositories.BugRepository;
 import com.fastoffer.backend.repositories.QuestionRepository;
 import com.fastoffer.backend.repositories.IntervieweeAccountRepository;

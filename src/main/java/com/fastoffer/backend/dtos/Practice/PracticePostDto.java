@@ -1,11 +1,12 @@
-package com.fastoffer.backend.dtos.Exam;
+package com.fastoffer.backend.dtos.Practice;
 
 import lombok.Data;
 
 import java.util.UUID;
 
 @Data
-public class ExamPostDto {
+//TODO 命名
+public class PracticePostDto {
     private UUID questionId;
 //    private String selectedOption;
 }
