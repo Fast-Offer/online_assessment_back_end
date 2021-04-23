@@ -1,13 +1,13 @@
-INSERT INTO collection (collectionId,
+INSERT INTO collection (collection_id,
                         creator,
-                        imageUrl,
+                        image_url,
                         name,
                         description,
-                        timeCost,
-                        isPublic,
+                        time_cost,
+                        is_public,
                         category,
                         type,
-                        questionList)
+                        question_list)
 VALUES ('1352b7e2-f911-4fc0-bf28-37f009db1a88',
         '15c13fc9-adc6-4cae-821e-9a7d113e7397',
         'http://dummyimage.com/211x100.png/dddddd/000000',

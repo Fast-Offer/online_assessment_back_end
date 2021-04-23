@@ -16,7 +16,7 @@ public class CollectionController {
 
     private final CollectionService collectionService;
 
-    @GetMapping(path = "/public")
+    @GetMapping
     public List<CollectionEntity> getCollections() {
         return collectionService.getAllPublicCollections();
     }

@@ -4,6 +4,9 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -17,7 +20,7 @@ import java.util.UUID;
 public class CollectionEntity {
 
     @Id
-    @Column(name = "collectionid")
+    @Column(name = "collection_id")
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private UUID collectionId;
@@ -25,7 +28,7 @@ public class CollectionEntity {
     @Column(name = "creator")
     private UUID creator;
 
-    @Column(name = "imageurl")
+    @Column(name = "image_url")
     private String imageUrl;
 
     @Column(name = "name")
@@ -34,10 +37,10 @@ public class CollectionEntity {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "timecost")
+    @Column(name = "time_cost")
     private String timeCost;
 
-    @Column(name = "ispublic")
+    @Column(name = "is_public")
     private boolean isPublic;
 
     @Column(name = "category")
@@ -46,6 +49,9 @@ public class CollectionEntity {
     @Column(name = "type")
     private String type;
 
-    @Column(name = "questionlist")
+    @Column(name = "question_list")
     private String questionList;
+
+//    @OneToMany(mappedBy = "collectionEntity")
+//    private List<CollectionQuestionEntity> collectionQuestionEntities;
 }

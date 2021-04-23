@@ -14,6 +14,6 @@ public class CollectionService {
     private final CollectionRepository collectionRepository;
 
     public List<CollectionEntity> getAllPublicCollections() {
-        return collectionRepository.findCollectionEntitiesByIsPublicIsTrue();
+        return collectionRepository.findAllCollections();
     }
 }
