@@ -6,6 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -58,4 +60,7 @@ public class QuestionEntity {
 
     @OneToMany(mappedBy = "questionEntity")
     private Set<BugEntity> bugEntities;
+
+//    @OneToMany(mappedBy = "questionEntity")
+//    private List<CollectionQuestionEntity> collectionQuestionEntities;
 }
