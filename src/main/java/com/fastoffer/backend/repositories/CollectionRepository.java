@@ -11,7 +11,7 @@ import java.util.UUID;
 @Repository
 public interface CollectionRepository extends JpaRepository<CollectionEntity, UUID> {
 
-    @Query(value = "SELECT * FROM collection WHERE ispublic = true", nativeQuery = true)
+    @Query(value = "SELECT * FROM collection WHERE is_public = true", nativeQuery = true)
     List<CollectionEntity> findAllCollections();
 
     List<CollectionEntity> findCollectionEntitiesByIsPublicIsTrue();

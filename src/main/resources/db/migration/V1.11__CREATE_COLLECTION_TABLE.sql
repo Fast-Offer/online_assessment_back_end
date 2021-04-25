@@ -1,13 +1,12 @@
 CREATE TABLE collection
 (
-    collectionId uuid PRIMARY KEY,
+    collection_id uuid PRIMARY KEY,
     creator      uuid,
-    imageUrl     VARCHAR(500),
+    image_url     VARCHAR(500),
     name         VARCHAR(100),
     description  VARCHAR(500),
-    timeCost     VARCHAR(50),
-    isPublic     boolean,
+    time_cost     VARCHAR(50),
+    is_public     boolean,
     category     VARCHAR(50),
-    type         VARCHAR(50),
-    questionList VARCHAR
+    type         VARCHAR(50)
 );
