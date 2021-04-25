@@ -142,3 +142,11 @@ com/fastoffer/backend/services/RedoService.java
  com.fastoffer.backend.services.RedoService
 com/fastoffer/backend/controllers/RedoDeleteController.java
  com.fastoffer.backend.controllers.RedoDeleteController
+com/fastoffer/backend/dtos/Mock/MockGetDto.java
+ com.fastoffer.backend.dtos.Mock.MockGetDto
+com/fastoffer/backend/dtos/Mock/MockPostDto.java
+ com.fastoffer.backend.dtos.Mock.MockPostDto
+com/fastoffer/backend/services/MockService.java
+ com.fastoffer.backend.services.MockService
+com/fastoffer/backend/controllers/MockController.java
+ com.fastoffer.backend.controllers.MockController
