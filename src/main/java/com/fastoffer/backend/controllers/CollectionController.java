@@ -1,5 +1,6 @@
 package com.fastoffer.backend.controllers;
 
+import com.fastoffer.backend.dtos.Collection.CollectionGetDto;
 import com.fastoffer.backend.entities.CollectionEntity;
 import com.fastoffer.backend.services.CollectionService;
 import lombok.AllArgsConstructor;
@@ -17,7 +18,7 @@ public class CollectionController {
     private final CollectionService collectionService;
 
     @GetMapping
-    public List<CollectionEntity> getCollections() {
+    public List<CollectionGetDto> getCollections() {
         return collectionService.getAllPublicCollections();
     }
 }

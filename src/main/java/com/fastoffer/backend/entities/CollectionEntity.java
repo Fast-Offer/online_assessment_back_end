@@ -4,9 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -49,9 +47,6 @@ public class CollectionEntity {
     @Column(name = "type")
     private String type;
 
-    @Column(name = "question_list")
-    private String questionList;
-
-//    @OneToMany(mappedBy = "collectionEntity")
-//    private List<CollectionQuestionEntity> collectionQuestionEntities;
+    @OneToMany(mappedBy = "collectionEntity")
+    private List<CollectionQuestionEntity> collectionQuestionEntities;
 }
