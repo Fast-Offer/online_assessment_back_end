@@ -2,12 +2,15 @@ package com.fastoffer.backend.services;
 
 import com.fastoffer.backend.dtos.Question.QuestionGetDto;
 import com.fastoffer.backend.dtos.Question.QuestionPostDto;
+import com.fastoffer.backend.entities.CollectionQuestionEntity;
 import com.fastoffer.backend.entities.QuestionEntity;
 import com.fastoffer.backend.mapper.QuestionMapper;
+import com.fastoffer.backend.repositories.CollectionQuestionRepository;
 import com.fastoffer.backend.repositories.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -17,6 +20,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class QuestionService {
     private final QuestionRepository questionRepository;
+    private final CollectionQuestionRepository collectionQuestionRepository;
     private final QuestionMapper questionMapper;
 
     public QuestionGetDto getQuestion(QuestionPostDto questionPostDto) {
@@ -26,17 +30,27 @@ public class QuestionService {
     }
 
     public List<QuestionGetDto> getQuestionsByCollectionId(UUID collectionId) {
+        // (1) Find all collection_question_entities first...
+        List<CollectionQuestionEntity> collectionQuestionEntities =
+                collectionQuestionRepository.findAllByCollectionEntity_CollectionId(collectionId);
 
+        // (2) Collect and assemble all questionIds into an ArrayList...
+        List<UUID> questionIds = new ArrayList<>();
+        for (CollectionQuestionEntity a: collectionQuestionEntities
+             ) {
+            questionIds.add(a.getQuestionEntity().getQuestionId());
+        }
 
-        return Arrays.asList(
-                new QuestionGetDto(
-                        UUID.fromString("077db05e-f4e0-49fd-8b68-3cb4b5c094b2"),
-                        "Which operator is used to multiply numbers?", "#", "$", "*", "X"),
-                new QuestionGetDto(
-                        UUID.fromString("0602196e-3d5e-4ad5-94c6-e2c7d624cf3a"),
-                        "How do you call a method in Java?",
-                        "methodName()", "(methodName)", "methodName[]", "methodName.")
-        );
+        // (3) Assemble all questions by questionIds we've just got...
+        List<QuestionGetDto> questionGetDtos = new ArrayList<>();
+        for (UUID questionId: questionIds
+             ) {
+            QuestionGetDto questionGetDto =
+                    questionMapper.fromEntity(questionRepository.findByQuestionId(questionId));
+            questionGetDtos.add(questionGetDto);
+        }
+
+        return questionGetDtos;
     }
 
 }

@@ -8,6 +8,5 @@ CREATE TABLE collection
     time_cost     VARCHAR(50),
     is_public     boolean,
     category     VARCHAR(50),
-    type         VARCHAR(50),
-    question_list VARCHAR
+    type         VARCHAR(50)
 );

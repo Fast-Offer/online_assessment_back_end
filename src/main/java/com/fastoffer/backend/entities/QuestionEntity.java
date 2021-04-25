@@ -61,6 +61,6 @@ public class QuestionEntity {
     @OneToMany(mappedBy = "questionEntity")
     private Set<BugEntity> bugEntities;
 
-//    @OneToMany(mappedBy = "questionEntity")
-//    private List<CollectionQuestionEntity> collectionQuestionEntities;
+    @OneToMany(mappedBy = "questionEntity")
+    private List<CollectionQuestionEntity> collectionQuestionEntities;
 }

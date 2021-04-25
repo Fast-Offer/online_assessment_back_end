@@ -25,7 +25,7 @@ public class QuestionController {
 
     @GetMapping(path = "{collectionId}")
     public List<QuestionGetDto> getQuestionsByCollectionId(@PathVariable("collectionId") UUID collectionId) {
-        System.out.println(collectionId);
+        System.out.println("Controller: " + collectionId);
         return questionService.getQuestionsByCollectionId(collectionId);
     }
 }
