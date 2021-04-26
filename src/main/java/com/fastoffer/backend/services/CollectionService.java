@@ -15,6 +15,7 @@ import java.util.List;
 public class CollectionService {
 
     private final CollectionRepository collectionRepository;
+    private final CollectionMapper collectionMapper;
 
     public List<CollectionGetDto> getAllPublicCollections() {
 
@@ -24,21 +25,23 @@ public class CollectionService {
         // Assemble result...
         List<CollectionGetDto> collectionGetDtos = new ArrayList<>();
         for (CollectionEntity collection: allCollections
-             ) {
-            System.out.println(collection.isPublic());
-            CollectionGetDto collectionGetDto =
-                    new CollectionGetDto(
-                            collection.getCollectionId(),
-                            collection.getCreator(),
-                            collection.getImageUrl(),
-                            collection.getName(),
-                            collection.getDescription(),
-                            collection.getTimeCost(),
-                            collection.isPublic(),
-                            collection.getCategory(),
-                            collection.getType()
-                    );
-            collectionGetDtos.add(collectionGetDto);
+             )
+            collectionGetDtos.add(collectionMapper.fromEntity(collection));
+        {
+//            System.out.println(collection.isPublic());
+//            CollectionGetDto collectionGetDto =
+//                    new CollectionGetDto(
+//                            collection.getCollectionId(),
+//                            collection.getCreator(),
+//                            collection.getImageUrl(),
+//                            collection.getName(),
+//                            collection.getDescription(),
+//                            collection.getTimeCost(),
+//                            collection.isPublic(),
+//                            collection.getCategory(),
+//                            collection.getType()
+//                    );
+//            collectionGetDtos.add(collectionGetDto);
         }
 
         return collectionGetDtos;
