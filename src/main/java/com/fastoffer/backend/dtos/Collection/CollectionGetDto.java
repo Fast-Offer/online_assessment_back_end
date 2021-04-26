@@ -8,13 +8,13 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 public class CollectionGetDto {
-    UUID collectionId;
-    UUID creator;
-    String imageUrl;
-    String name;
-    String description;
-    String timeCost;
-    boolean isPublic;
-    String category;
-    String type;
+    private UUID collectionId;
+    private UUID creator;
+    private String imageUrl;
+    private String name;
+    private String description;
+    private String timeCost;
+    private boolean isPublic;
+    private String category;
+    private String type;
 }
